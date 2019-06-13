@@ -1,15 +1,13 @@
-import Taro, { Component } from '@tarojs/taro'
-import { View, Button, Text } from '@tarojs/components'
-import { AtButton, AtBadge } from 'taro-ui'
-import { connect } from '@tarojs/redux'
-
-import { newsList } from '@/actions/news'
-
-import './news.scss'
+import { newsList } from '@/actions/news';
+import { View } from '@tarojs/components';
+import { connect } from '@tarojs/redux';
+import Taro from '@tarojs/taro';
+import { AtList, AtListItem } from 'taro-ui';
+import './news.scss';
 
 
-@connect(({ data }) => ({
-    data
+@connect(({ news }) => ({
+    news
 }), (dispatch) => ({
     newsList() {
         dispatch(newsList())
@@ -18,7 +16,7 @@ import './news.scss'
 class Index extends Taro.Component {
 
     config = {
-        navigationBarTitleText: '新闻列表'
+        navigationBarTitleText: '关注新闻'
     }
 
     componentWillReceiveProps(nextProps) {
@@ -27,13 +25,23 @@ class Index extends Taro.Component {
 
     componentWillUnmount() { }
 
-    componentDidShow() { }
+    componentDidShow() { this.props.newsList() }
 
     componentDidHide() { }
 
     render() {
         return (
             <View className='index'>
+                <AtList>
+                    {this.props.news.newsList.map((item, index) => (
+                        <AtListItem
+                            arrow='right'
+                            extraText='详细信息'
+                            title={item.adName}
+                            note={item.content}
+                        />
+                    ))}
+                </AtList>
             </View>
         )
     }

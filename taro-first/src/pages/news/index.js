@@ -1,11 +1,11 @@
 import Taro from '@tarojs/taro'
 import { View, Image } from '@tarojs/components'
 import logoImg from '@/assets/images/logo_taro.png'
-import './index.scss'
+import '../index/index.scss'
 
 export default class Index extends Taro.Component {
   config = {
-    navigationBarTitleText: 'Taro UI'
+    navigationBarTitleText: '新闻、消息'
   }
 
   constructor() {
@@ -14,24 +14,14 @@ export default class Index extends Taro.Component {
     this.state = {
       list: [
         {
-          id: 'count_redux',
-          title: 'Redux',
-          content: '场景收集',
+          id: 'news',
+          title: '简易新闻',
+          content: '列表、图文',
         },
         {
           id: 'news',
-          title: '数据列表',
-          content: '新闻列表、消息列表等',
-        },
-        {
-          id: 'weixin',
-          title: '微信API',
-          content: 'api调用例子',
-        },
-        {
-          id: 'cus_theme',
-          title: '主题',
-          content: '收集各类主题模板',
+          title: '新闻分类',
+          content: '带tab新闻分类',
         }
       ]
     }
@@ -48,8 +38,7 @@ export default class Index extends Taro.Component {
   gotoPanel = e => {
     const { id } = e.currentTarget.dataset
     Taro.navigateTo({
-      // url: `/pages/panel/index?id=${id.toLowerCase()}`
-      url: `/pages/${id.toLowerCase()}/index`
+      url: `/pages/${id.toLowerCase()}/${id.toLowerCase()}`
     })
   }
 
@@ -61,7 +50,7 @@ export default class Index extends Taro.Component {
         <View className='logo'>
           <Image src={logoImg} className='img' mode='widthFix' />
         </View>
-        <View className='page-title'>Taro UI</View>
+        <View className='page-title'>新闻、消息</View>
         <View className='module-list'>
           {list.map((item, index) => (
             <View

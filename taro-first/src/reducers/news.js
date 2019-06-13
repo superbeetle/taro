@@ -2,7 +2,8 @@ import { NEWS_LIST } from '@/constants/news'
 import { NEWS_INFO } from '../constants/news';
 
 const INITIAL_STATE = {
-    itemInfo: {}
+    newsInfo: {},
+    newsList: []
 }
 
 export default function news(state = INITIAL_STATE, action) {
@@ -10,13 +11,13 @@ export default function news(state = INITIAL_STATE, action) {
         case NEWS_LIST: {
             return {
                 ...state,
-                newsList: action.payload
+                newsList: action.payload.data
             }
         }
         case NEWS_INFO: {
             return {
                 ...state,
-                newsInfo: action.payload
+                newsInfo: action.payload.data
             }
         }
         default:

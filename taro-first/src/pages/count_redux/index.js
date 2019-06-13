@@ -1,9 +1,9 @@
-import Taro, { Component } from './node_modules/@tarojs/taro'
-import { View, Button, Text } from './node_modules/@tarojs/components'
-import { AtButton, AtBadge } from './node_modules/taro-ui'
-import { connect } from './node_modules/@tarojs/redux'
+import Taro, { Component } from '@tarojs/taro'
+import { View, Button, Text } from '@tarojs/components'
+import { AtButton, AtBadge } from 'taro-ui'
+import { connect } from '@tarojs/redux'
 
-import { add, minus, asyncAdd } from './node_modules/@/actions/counter'
+import { add, minus, asyncAdd } from '@/actions/counter'
 
 import './count_redux.scss'
 

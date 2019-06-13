@@ -10,8 +10,8 @@ import './app.scss'
 // 默认京东样式
 // import 'taro-ui/dist/style/index.scss'
 // 蓝色主题
-import '@/assets/theme/taro-ui.css'
-import '@/assets/theme/custom-theme.scss'
+import '@/assets/css/theme/taro-ui.css'
+import '@/assets/css/theme/custom-theme.scss'
 
 // 如果需要在 h5 环境中开启 React Devtools
 // 取消以下注释：
@@ -26,8 +26,13 @@ class App extends Component {
   config = {
     pages: [
       'pages/index/index',
-      'pages/count_redux/count_redux',
-      'pages/news/news'
+      'pages/count_redux/index',
+      /* 新闻 */
+      'pages/news/index',
+      'pages/news/news',
+      /* 微信 */
+      'pages/weixin/index',
+      'pages/weixin/open_api',
     ],
     window: {
       backgroundTextStyle: 'light',
