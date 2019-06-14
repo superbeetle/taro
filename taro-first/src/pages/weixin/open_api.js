@@ -1,8 +1,8 @@
 import { View } from '@tarojs/components';
 import Taro from '@tarojs/taro';
-import { AtButton, AtDivider, AtSteps } from 'taro-ui';
-
+import { AtButton, AtSteps } from 'taro-ui';
 import '../index/index.scss';
+
 
 export default class OpenApi extends Taro.Component {
     config = {

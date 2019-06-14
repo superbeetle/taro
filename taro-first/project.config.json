@@ -1,13 +1,13 @@
 {
-  "miniprogramRoot": "./dist",
-  "projectname": "taro-first",
-  "description": "taro起步",
-  "appid": "touristappid",
-  "setting": {
-    "urlCheck": true,
-    "es6": false,
-    "postcss": false,
-    "minified": false
-  },
-  "compileType": "miniprogram"
+    "miniprogramRoot": "./dist",
+    "projectname": "taro-first",
+    "description": "taro起步",
+    "appid": "wx7e341e5ef667e1d6",
+    "setting": {
+        "urlCheck": true,
+        "es6": false,
+        "postcss": false,
+        "minified": false
+    },
+    "compileType": "miniprogram"
 }

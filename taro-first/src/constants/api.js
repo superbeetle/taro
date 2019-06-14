@@ -3,6 +3,10 @@
  * 只所以不在代码中直接引用，是因为 eslint 会报 no-undef 的错误，因此用如下方式处理
  */
 export const host = HOST
+
+// weixin
+
+
 // user
 export const API_USER = `${host}/xhr/user/getDetail.json`
 export const API_USER_LOGIN = `${host}/xhr/u/mailLogin.json`

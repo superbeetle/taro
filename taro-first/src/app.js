@@ -1,6 +1,6 @@
-import '@tarojs/async-await'
 import Taro, { Component } from '@tarojs/taro'
 import { Provider } from '@tarojs/redux'
+import '@tarojs/async-await'
 
 import Index from './pages/index'
 
@@ -10,8 +10,8 @@ import './app.scss'
 // 默认京东样式
 // import 'taro-ui/dist/style/index.scss'
 // 蓝色主题
-import '@/assets/css/theme/taro-ui.css'
-import '@/assets/css/theme/custom-theme.scss'
+import '@/styles/theme/taro-ui.css'
+import '@/styles/theme/custom-theme.scss'
 
 // 如果需要在 h5 环境中开启 React Devtools
 // 取消以下注释：
@@ -33,6 +33,8 @@ class App extends Component {
       /* 微信 */
       'pages/weixin/index',
       'pages/weixin/open_api',
+      'pages/weixin/audio',
+      'pages/weixin/share',
     ],
     window: {
       backgroundTextStyle: 'light',

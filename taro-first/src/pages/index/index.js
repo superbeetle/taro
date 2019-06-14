@@ -29,6 +29,11 @@ export default class Index extends Taro.Component {
           content: 'api调用例子',
         },
         {
+          id: 'charts',
+          title: '图表',
+          content: '收集图表模板',
+        },
+        {
           id: 'cus_theme',
           title: '主题',
           content: '收集各类主题模板',

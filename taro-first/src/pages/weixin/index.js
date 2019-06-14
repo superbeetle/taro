@@ -29,9 +29,14 @@ export default class Index extends Taro.Component {
                     content: '相机',
                 },
                 {
-                    id: 'playvoice',
+                    id: 'audio',
                     title: '音频',
                     content: '音频',
+                },
+                {
+                    id: 'share',
+                    title: '分享',
+                    content: '小程序分享',
                 }
             ]
         }

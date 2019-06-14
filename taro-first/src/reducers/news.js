@@ -1,5 +1,5 @@
 import { NEWS_LIST } from '@/constants/news'
-import { NEWS_INFO } from '../constants/news';
+import { NEWS_INFO } from '@/constants/news';
 
 const INITIAL_STATE = {
     newsInfo: {},
